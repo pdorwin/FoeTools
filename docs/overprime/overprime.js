@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const spots = ["P5", "P4", "P3", "P2", "P1"];
 
     // Initial values
-    correctStringInput.value = "Pawly 🐊 Arc 162 → 163 P5(48) P4(257) P3(1026) P2(3078) P1(6147)";
+    correctStringInput.value = "FoePlayer Arc 162 → 163 P5(48) P4(257) P3(1026) P2(3078) P1(6147)";
 
     // Event Listeners
     correctStringInput.addEventListener('input', parseAndCalculate);
