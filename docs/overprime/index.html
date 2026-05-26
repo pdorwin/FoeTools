@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB Overprime Calculator</title>
+    <link rel="stylesheet" href="overprime.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="back-link">&larr; Back to Dashboard</a>
+            <h1>GB Overprime Calculator</h1>
+            <p class="subtitle">Calculate discount values, update discount string and paste it into the FOE 1.9 thread</p>
+        </header>
+
+        <main class="calculator-card">
+            <!-- Input Section -->
+            <div class="form-group">
+                <label for="correctString">Correct String</label>
+                <input type="text" id="correctString" placeholder="e.g., Pawly 🐊 Arc 162 → 163 P5(48) P4(257) P3(1026) P2(3078) P1(6147)">
+            </div>
+
+            <div class="form-group">
+                <label for="discountString">Discount String</label>
+                <div class="copy-input-container">
+                    <input type="text" id="discountString" readonly placeholder="Generated discount string will appear here...">
+                    <button id="btnCopy" class="btn btn-secondary">Copy</button>
+                </div>
+            </div>
+
+            <!-- Target Info Row -->
+            <div class="target-info-grid">
+                <div class="form-group">
+                    <label for="ownerVal">Owner</label>
+                    <input type="number" id="ownerVal" value="31860">
+                </div>
+                <div class="form-group">
+                    <label for="overprimeVal">Overprime</label>
+                    <input type="number" id="overprimeVal" value="33810">
+                </div>
+                <div class="form-group">
+                    <label>Difference</label>
+                    <div id="differenceVal" class="difference-display">0</div>
+                </div>
+            </div>
+
+            <!-- Values Table / Grid -->
+            <div class="table-responsive">
+                <table class="values-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>P5</th>
+                            <th>P4</th>
+                            <th>P3</th>
+                            <th>P2</th>
+                            <th>P1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">Original Values</td>
+                            <td id="orig-P5">0</td>
+                            <td id="orig-P4">0</td>
+                            <td id="orig-P3">0</td>
+                            <td id="orig-P2">0</td>
+                            <td id="orig-P1">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Discount Values</td>
+                            <td id="disc-P5" class="highlight-discount">0</td>
+                            <td id="disc-P4" class="highlight-discount">0</td>
+                            <td id="disc-P3" class="highlight-discount">0</td>
+                            <td id="disc-P2" class="highlight-discount">0</td>
+                            <td id="disc-P1" class="highlight-discount">0</td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Profit/Reduction</td>
+                            <td id="profit-P5">0</td>
+                            <td id="profit-P4">0</td>
+                            <td id="profit-P3">0</td>
+                            <td id="profit-P2">0</td>
+                            <td id="profit-P1">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions-container">
+                <button id="btnReset" class="btn btn-danger">Reset</button>
+            </div>
+        </main>
+    </div>
+    <script src="overprime.js"></script>
+</body>
+</html>
